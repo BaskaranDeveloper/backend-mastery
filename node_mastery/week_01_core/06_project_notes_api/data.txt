@@ -1,0 +1,3 @@
+Hello Node.JS this is Get request
+
+Hello this is Node.JS write method using POST 
