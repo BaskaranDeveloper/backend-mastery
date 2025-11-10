@@ -55,3 +55,13 @@ async function run() {
 
 run();
 // Same non-blocking behavior — just cleaner syntax.
+
+
+
+// Internal Timing with the Event Loop
+
+console.log("A");
+fs.readFile("sample.txt",()=>console.log("B"));
+setTimeout(()=>console.log("C"),0);
+Promise.resolve().then(()=>console.log("D"));
+console.log("E");
