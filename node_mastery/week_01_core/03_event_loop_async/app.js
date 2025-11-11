@@ -1,9 +1,9 @@
 console.log("A");
-setTimeout(()=>{
+setTimeout(() => {
     console.log("B");
-},0);
+}, 0);
 
-Promise.resolve().then(()=>console.log("C"));
+Promise.resolve().then(() => console.log("C"));
 
 console.log("D");
 
