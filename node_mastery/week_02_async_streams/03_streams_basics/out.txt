@@ -1,0 +1,3 @@
+Hello Node.JS
+This is written using stream
+Done writing
