@@ -5,8 +5,10 @@ class TinyExpress {
         this.middlewares = [];
     }
 
+    // register middleware
     use(fn) {
         this.middlewares.push(fn);
+        console.log("Middleware registered:", this.middlewares.length);
     }
 
     handleRequest(req, res) {
@@ -20,13 +22,14 @@ class TinyExpress {
             }
         };
 
-        next();
+        next(); // start running the pipeline
     }
 
     listen(port, callback) {
         const server = http.createServer((req, res) => {
             this.handleRequest(req, res);
         });
+
         server.listen(port, callback);
     }
 }
